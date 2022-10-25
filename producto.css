@@ -1,0 +1,374 @@
+*{
+    box-sizing: border-box;/*Regula el tamaño, no permite que se desborden*/
+}
+/*Quita el Scroll*/
+::-webkit-scrollbar {
+    display: none;
+}
+/*Modifica el txt sobre la 1ra imagen homepage*/
+h1{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: 30;
+}
+h2{
+    font-family: 'Playfair Display', serif;
+    font-weight: lighter;
+    color: #333333;
+}
+h3{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 25;
+    color: #575757;
+}
+h4{
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 15;
+    color: #333333;
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto  auto 1fr 1fr 1fr 1fr 1fr;
+    align-items: center;
+    max-width: 320;
+}
+/*1er Container Body
+Encabezado
+Se implementa un display tipo grilla de 3 columnas de misma medida y una sola fila */
+header{
+    display:grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: 1fr;
+    max-width: 320;
+}
+/*Barra de Navegación*/
+.nav{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    justify-content: flex-end;
+}
+/*Logo te*/
+.nave1{
+    grid-area: 1 / 1 / 2 / 2;
+    align-self: center;
+}
+/*Despliegue*/
+.pay{
+    grid-area: 1 / 2 / 2 / 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20;
+}
+/*USD*/
+.pay1{
+    padding: 0 20; /*Da espaciado entre USD y flecha*/
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 600;
+}
+.pay2{
+    width: 10;
+    height: 10;
+} 
+.menu{
+    grid-area: 1 /  3 / 2 /4;
+} 
+.bar{
+    width:10%;
+    height: 100%;
+}
+/*Carrito de compras*/
+.car{
+    transform: scaleX(-1);/*Genera un estilo espejo*/
+    padding: 0 20;
+}
+/*2do container Body*/
+.first{
+    grid-area: 2 / 1 / 3 / 2;
+    background-color: #333333;
+    max-width: 320;
+}
+.ft{
+    text-align: center;
+    margin-top: 0; /*Permite que el txt flote sobre la imagen*/
+}
+/*Txt subrayado "Home / Product"*/
+.ft1{
+    font-family: 'Lora', serif;
+    font-weight: lighter;
+    color: #fff;
+    font-size: 18;
+    padding-bottom: 0;
+}
+/*3er container body*/
+.second{
+    grid-area: 3 / 1 / 4 / 2; 
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    max-width: 320;
+}
+/*Containers sale, 3ro Body*/
+.s1 {
+    grid-area: 1 / 1 / 2 / 2;
+    display: grid;
+    grid-column: 1fr;
+    grid-template-rows: 1fr 1/2fr;
+    max-width: 320;
+} 
+/*Ubi imagen producto*/
+.s1a{
+    grid-area: 1 / 1 / 2 / 2;
+    width: 50%;
+    height: 50%;
+}
+/*Ubi riel productos*/
+.s1b{
+    grid-area: 2 / 1 / 3 / 2;
+    max-width: 320;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 100;
+}
+/*Flechas riel productos*/
+.s1c{
+    grid-area: 2 ;
+    width: 20;
+    height: 20;
+}
+/*Img. riel*/
+.s1d{
+    padding: 0 20;
+}
+/*Ubi container descripción*/
+.s2{
+    grid-area: 2 / 1 / 3 / 2;
+}
+/*Ubi calificacion*/
+.s2a{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    margin-top: -20;
+}
+/*Estilo estrellas general*/
+.s2b{
+    grid-area: 1 / 1 / 2 / 2;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+}
+.s2c{
+    grid-area:  1 / 2 / 1 / 3;
+    margin-left: -150;
+}
+/*Estrellas verdes*/
+.green{
+    padding: 2;
+    width: 20;
+    height: 20;
+}
+/*Estrella gris*/
+.gray{
+    padding: 2;
+    width: 20;
+    height: 20;
+}
+.pre{
+    font-family: 'Lora', serif;
+    color: #333333;
+    font-weight: bold;
+    font-size: 25;
+}
+.span{
+    color: #529F0F;
+}
+.ico{
+    display: grid;
+    grid-template-columns: 1fr 7fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+.ico1{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.ico2{
+    grid-area: 1 / 2 / 2 / 3;
+    border: 15rem;
+    padding:  0;
+}
+.fa-cart-shopping{
+    margin: 0 20;
+}
+.redes{
+    display: flex;
+}
+.twi{
+    width: 40;
+    height: 50;
+}
+.fb{
+    width: 55;
+    height: 45;
+}
+.g{
+    width: 40;
+    height: 45;
+    border-radius: 10px;
+}
+.pi{
+    width: 50;
+    height: 46;
+    padding-left: 10;
+}
+/*4to container Body*/
+.third{
+    grid-area: 4 / 1 / 5 / 2;
+    display: grid;/*Aplicando grilla container 4*/
+    grid-template-columns: 1fr;
+    grid-template-rows: 1/2fr 1fr;
+    padding: 0 30;
+    max-width: 320;
+}
+/*Estilo parrafo 4to. container*/
+.txt{
+    font-family: 'Lora', serif;
+    font-size: 20;
+    line-height: 2;
+    color: #333333;
+}
+/*4to Container secc1*/
+.t1{
+    grid-area: 1 / 1 / 2 / 2;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows:1fr;
+    padding: 0 50;
+    font-size: 25;
+}
+.t1a{
+    text-decoration: underline;
+    color: #529F0F;
+}
+/*4to Container secc2*/
+.t2{
+    grid-area: 2 / 1 / 3 / 2;
+    justify-content: center;
+    padding: 0 10;
+}
+/*Modifica estilo de la lista descripcion*/
+.t2a{
+    padding-left: 0;
+    list-style: none;
+}
+/*Txt nombre Te*/
+.txt1{
+    font-family: 'Lora', serif;
+    color: #333333;
+    font-size: 20;
+    font-weight: 500;
+    line-height: 2;
+}
+/*Txt precio actual Te*/
+.txt2{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    color: #333333;
+    font-size: 15;
+}
+/*Txt precio pasado Te*/
+.txt3{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: bold;
+    color: #575757;
+    font-size: 15;
+}
+/*5to container body*/
+.fourth{
+    grid-area: 5 / 1 / 6 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1/2fr 1fr;
+    padding: 0 40;
+    max-width: 320;
+
+}
+.rel{
+    grid-area: 1 / 1 / 2 /5;
+    font-size: 35;
+    text-align: start;
+}
+.rel1{
+    grid-area: 2 / 1 / 3 /2;
+}
+.rel2{
+    grid-area: 2 / 2 / 3 /3;
+}
+.rel3{
+    grid-area: 2 / 3 / 3 /4;
+}
+.rel4{
+    grid-area: 2 / 4 / 3 /5;
+}
+
+/*6to Container*/
+footer{
+    grid-area: 7 / 1 / 8 / 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1/8fr;
+    line-height: 2;
+    padding: 50 0;
+    max-width: 320;
+}
+.d1{
+    grid-area: 1 / 1 / 2 / 2;
+}
+.d2{
+    grid-area: 1 / 2 / 2 / 3;
+}
+.d3{
+    grid-area: 1 / 3 / 2 / 4;
+}
+.d4{
+    grid-area: 1 / 4 / 2 / 5;
+}
+.li{
+    list-style: none;
+    padding-left: 0;
+    font-family: 'Lora', serif;
+    font-size: 16;
+    color:  #333333;
+}
+.d5{
+    grid-area: 2 / 1 / 3 / 5;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    padding-top: 50;
+}
+/*Ultimos elementos Footer*/
+.d6{
+    grid-area: 1 / 1  / 2 / 2;
+    font-family: 'Lora', serif;
+    font-size: 16;
+    color:  #333333;
+}
+.d7{
+    grid-area: 1 /  2  / 2 /  3;
+    display: flex;
+    justify-content: end;
+    padding: 0 0;
+}
+.fa-solid.fa-heart{
+    color: #ff0000;
+}
